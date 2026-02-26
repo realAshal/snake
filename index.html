@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Snake and Ladder - 50 Points</title>
+<style>
+body{
+margin:0;
+padding:0;
+background:#0f051d;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.board{
+width:700px;
+height:700px;
+background:#1a0b2e;
+display:grid;
+grid-template-columns:repeat(10,1fr);
+grid-template-rows:repeat(5,1fr);
+position:relative;
+box-shadow:0 0 40px #7a00ff;
+border:8px solid #6a00ff;
+}
+
+.cell{
+border:1px solid #2e1a47;
+display:flex;
+justify-content:flex-end;
+align-items:flex-start;
+padding:5px;
+color:#b084ff;
+font-size:14px;
+}
+
+.cell:nth-child(odd){
+background:#140824;
+}
+
+.cell:nth-child(even){
+background:#1f0f38;
+}
+
+.snake{
+position:absolute;
+height:12px;
+background:linear-gradient(90deg,#00e0ff,#0077ff);
+border-radius:20px;
+box-shadow:0 0 15px #00e0ff;
+}
+
+.snake:before,
+.snake:after{
+content:"";
+position:absolute;
+width:18px;
+height:18px;
+background:#00e0ff;
+border-radius:50%;
+top:-3px;
+}
+
+.snake:before{
+left:-8px;
+}
+
+.snake:after{
+right:-8px;
+}
+
+.s1{
+width:300px;
+top:100px;
+left:200px;
+transform:rotate(25deg);
+}
+
+.s2{
+width:250px;
+top:300px;
+left:100px;
+transform:rotate(-35deg);
+}
+
+.s3{
+width:200px;
+top:450px;
+left:350px;
+transform:rotate(40deg);
+}
+
+.ladder{
+position:absolute;
+width:14px;
+background:#c084fc;
+box-shadow:0 0 15px #c084fc;
+}
+
+.ladder:before{
+content:"";
+position:absolute;
+left:-18px;
+width:50px;
+height:4px;
+background:#e0aaff;
+box-shadow:0 0 10px #e0aaff;
+}
+
+.ladder:after{
+content:"";
+position:absolute;
+left:-18px;
+width:50px;
+height:4px;
+background:#e0aaff;
+top:40px;
+box-shadow:0 0 10px #e0aaff;
+}
+
+.l1{
+height:200px;
+bottom:80px;
+left:100px;
+transform:rotate(-20deg);
+}
+
+.l2{
+height:220px;
+bottom:200px;
+right:150px;
+transform:rotate(25deg);
+}
+
+.l3{
+height:180px;
+bottom:120px;
+left:350px;
+transform:rotate(-15deg);
+}
+</style>
+</head>
+<body>
+
+<div class="board">
+
+<div class="cell">50</div>
+<div class="cell">49</div>
+<div class="cell">48</div>
+<div class="cell">47</div>
+<div class="cell">46</div>
+<div class="cell">45</div>
+<div class="cell">44</div>
+<div class="cell">43</div>
+<div class="cell">42</div>
+<div class="cell">41</div>
+
+<div class="cell">40</div>
+<div class="cell">39</div>
+<div class="cell">38</div>
+<div class="cell">37</div>
+<div class="cell">36</div>
+<div class="cell">35</div>
+<div class="cell">34</div>
+<div class="cell">33</div>
+<div class="cell">32</div>
+<div class="cell">31</div>
+
+<div class="cell">30</div>
+<div class="cell">29</div>
+<div class="cell">28</div>
+<div class="cell">27</div>
+<div class="cell">26</div>
+<div class="cell">25</div>
+<div class="cell">24</div>
+<div class="cell">23</div>
+<div class="cell">22</div>
+<div class="cell">21</div>
+
+<div class="cell">20</div>
+<div class="cell">19</div>
+<div class="cell">18</div>
+<div class="cell">17</div>
+<div class="cell">16</div>
+<div class="cell">15</div>
+<div class="cell">14</div>
+<div class="cell">13</div>
+<div class="cell">12</div>
+<div class="cell">11</div>
+
+<div class="cell">10</div>
+<div class="cell">9</div>
+<div class="cell">8</div>
+<div class="cell">7</div>
+<div class="cell">6</div>
+<div class="cell">5</div>
+<div class="cell">4</div>
+<div class="cell">3</div>
+<div class="cell">2</div>
+<div class="cell">1</div>
+
+<div class="snake s1"></div>
+<div class="snake s2"></div>
+<div class="snake s3"></div>
+
+<div class="ladder l1"></div>
+<div class="ladder l2"></div>
+<div class="ladder l3"></div>
+
+</div>
+
+</body>
+</html>
